@@ -1,0 +1,57 @@
+import sharp from 'sharp';
+import fs from 'fs';
+import path from 'path';
+
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 305.45 305.45" width="512" height="512">
+  <defs>
+    <!-- Subtle drop shadow for depth -->
+    <filter id="subtle-shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1B2B1F" flood-opacity="0.18" />
+    </filter>
+  </defs>
+  <!-- Outer Ring: NEUMAN Forest Green with subtle shadow -->
+  <circle cx="146.72" cy="146.72" r="146" fill="#2C4231" filter="url(#subtle-shadow)" />
+  <!-- Inner Background: NEUMAN Tailor Linen Cream -->
+  <circle cx="146.72" cy="146.72" r="139.5" fill="#F5E8C7" />
+  <!-- Monogram N: NEUMAN Forest Green -->
+  <path fill="#2C4231" d="M110.13,186.45c1.84,8.59,1.43,16.95-1.11,24.84-3.26,10.1-12.52,15.92-22.87,14.42-5.18-.75-10.28-2.28-13.65-6.67,8.58-3.92,14.02-10.68,16.31-19.53,3.13-12.07,4.04-23.98,4.08-36.64l.21-66.68c.02-7.02-4.11-12.6-10.01-15.81-4.28-2.33-8.65-2.72-13.69-4.25,9.83-10.47,26.08-9.64,37.8-3.08,8.31,4.65,15.12,10.79,21.15,18.2,9.19,11.3,16.55,23.19,24.51,35.48l43.15,66.65c.89-11.92,1.08-23.76.16-35.84-.88-11.58-3.68-22.34-6.42-33.55-3.64-14.88-7.2-33.56.71-46.43,2.22-3.62,5.06-6.75,9.15-8.27,8.27-3.08,21.99-1.55,23.97,6.34-7.94,2.84-12.89,8.67-15.38,16.53-2.99,9.44-4.23,19.22-4.79,29.26l.38,33.79.16,43.74c.02,6.27,3.83,11.54,8.97,14.62l9.14,3.76c.61.25,1.31.96,1.34,1.39.22,2.81-16.15,12.55-32.73,2.86-17.58-10.28-32.11-32.99-43.43-50.63l-24.67-38.46-13.49-20.7-8.55-11.67-.25,24.14c-.13,12.7,1.78,24.66,4.42,36.99l5.4,25.22Z"/>
+</svg>`;
+
+async function run() {
+  const baseDir = '/Users/jb/.gemini/antigravity/scratch/neuman';
+  
+  // 1. Save canonical SVG icon to src/app/icon.svg and public/icon.svg
+  fs.writeFileSync(path.join(baseDir, 'src/app/icon.svg'), svgContent, 'utf-8');
+  fs.writeFileSync(path.join(baseDir, 'public/icon.svg'), svgContent, 'utf-8');
+  fs.writeFileSync(path.join(baseDir, 'public/brand/neuman-favicon.svg'), svgContent, 'utf-8');
+  console.log('Saved SVG icons');
+
+  // 2. Render 512x512 PNG
+  const buf512 = await sharp(Buffer.from(svgContent))
+    .resize(512, 512)
+    .png({ quality: 100, compressionLevel: 9 })
+    .toBuffer();
+  fs.writeFileSync(path.join(baseDir, 'src/app/icon.png'), buf512);
+  fs.writeFileSync(path.join(baseDir, 'public/icon.png'), buf512);
+  console.log('Saved 512x512 icon.png');
+
+  // 3. Render 180x180 apple-icon.png
+  const buf180 = await sharp(Buffer.from(svgContent))
+    .resize(180, 180)
+    .png({ quality: 100, compressionLevel: 9 })
+    .toBuffer();
+  fs.writeFileSync(path.join(baseDir, 'src/app/apple-icon.png'), buf180);
+  fs.writeFileSync(path.join(baseDir, 'public/apple-icon.png'), buf180);
+  console.log('Saved 180x180 apple-icon.png');
+
+  // 4. Render 64x64, 32x32, 16x16 PNGs
+  const buf64 = await sharp(Buffer.from(svgContent)).resize(64, 64).png().toBuffer();
+  const buf32 = await sharp(Buffer.from(svgContent)).resize(32, 32).png().toBuffer();
+  const buf16 = await sharp(Buffer.from(svgContent)).resize(16, 16).png().toBuffer();
+  fs.writeFileSync(path.join(baseDir, 'public/icon-64.png'), buf64);
+  fs.writeFileSync(path.join(baseDir, 'public/icon-32.png'), buf32);
+  fs.writeFileSync(path.join(baseDir, 'public/icon-16.png'), buf16);
+  console.log('Saved 64, 32, 16 PNGs');
+}
+
+run().catch(console.error);

@@ -1,0 +1,409 @@
+{
+  "relations": [
+    {
+      "id": "rel-1788808267699",
+      "nombre": "Johanna Yepes",
+      "empresa": "Dinamic Showroom",
+      "cargo": "Director de Producción",
+      "email": "comercialdinamic@gmail.com",
+      "telefono": "+573133962255",
+      "tipo": "B2B",
+      "tags": [
+        "B2B",
+        "Paso-0-Auto",
+        "Algodón 100%"
+      ],
+      "puntaje": 75,
+      "ultimaInteraccion": "Hoy",
+      "materialPrincipal": "Algodón 100%",
+      "volumenMensualKg": 50,
+      "ciudad": "Bogotá",
+      "notas": "",
+      "pasoActual": "7. Entregado con Certificado QR",
+      "relacionEtapa": "7. Entregado con Certificado QR",
+      "proyectoEtapa": "7. Entregado con Certificado QR",
+      "responsable": "Jerónimo"
+    },
+    {
+      "id": "rel-1788808201361",
+      "nombre": "Isabela Gutierrez",
+      "empresa": "Juan de Dios",
+      "cargo": "Director de Producción",
+      "email": "Isabelagutierrez@juandedios.co",
+      "telefono": "No",
+      "tipo": "B2B",
+      "tags": [
+        "B2B",
+        "Paso-0-Auto",
+        "Algodón 100%"
+      ],
+      "puntaje": 75,
+      "ultimaInteraccion": "Hoy",
+      "materialPrincipal": "Algodón 100%",
+      "volumenMensualKg": 50,
+      "ciudad": "Bogotá",
+      "notas": "",
+      "pasoActual": "0. Recepción Automática",
+      "relacionEtapa": "0. Recepción Automática",
+      "proyectoEtapa": "0. Recepción Automática",
+      "responsable": "Amalia"
+    },
+    {
+      "id": "rel-1788808144662",
+      "nombre": "Santi (tienda)",
+      "empresa": "One Half",
+      "cargo": "Director de Producción",
+      "email": "crodriguez@onehalf.com.co",
+      "telefono": "No",
+      "tipo": "B2B",
+      "tags": [
+        "B2B",
+        "Paso-0-Auto",
+        "Algodón 100%"
+      ],
+      "puntaje": 75,
+      "ultimaInteraccion": "Hoy",
+      "materialPrincipal": "Algodón 100%",
+      "volumenMensualKg": 50,
+      "ciudad": "Bogotá",
+      "notas": "",
+      "pasoActual": "0. Recepción Automática",
+      "relacionEtapa": "0. Recepción Automática",
+      "proyectoEtapa": "0. Recepción Automática",
+      "responsable": "Pablo"
+    },
+    {
+      "id": "rel-1788807995326",
+      "nombre": "Daniela Rivera",
+      "empresa": "Feroz",
+      "cargo": "Director de Producción",
+      "email": "info@feroz.com.co",
+      "telefono": "@driveraina",
+      "tipo": "B2B",
+      "tags": [
+        "B2B",
+        "Paso-0-Auto",
+        "Denim / Índigo"
+      ],
+      "puntaje": 75,
+      "ultimaInteraccion": "Hoy",
+      "materialPrincipal": "Denim / Índigo",
+      "volumenMensualKg": 50,
+      "ciudad": "Bogotá",
+      "notas": "",
+      "pasoActual": "0. Recepción Automática",
+      "relacionEtapa": "0. Recepción Automática",
+      "proyectoEtapa": "0. Recepción Automática",
+      "responsable": "Santiago"
+    },
+    {
+      "id": "rel-1788784207765",
+      "nombre": "Gustavo",
+      "empresa": "Tucurinica",
+      "cargo": "Director de Producción",
+      "email": "info@tucurinica.com.co",
+      "telefono": "+573173714672",
+      "tipo": "B2B",
+      "tags": [
+        "B2B",
+        "Paso-0-Auto",
+        "Mezclas Poli-Algodón"
+      ],
+      "puntaje": 75,
+      "ultimaInteraccion": "Hoy",
+      "materialPrincipal": "Mezclas Poli-Algodón",
+      "volumenMensualKg": 50,
+      "ciudad": "Bogotá",
+      "notas": "",
+      "pasoActual": "0. Recepción Automática",
+      "relacionEtapa": "0. Recepción Automática",
+      "proyectoEtapa": "0. Recepción Automática",
+      "responsable": "Jerónimo"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "opp-1788808267706",
+      "relationId": "rel-1788808267699",
+      "titulo": "Lote Marquillas Tejidas Satín (0 Kg)",
+      "empresa": "Dinamic Showroom",
+      "etapa": "7. Entregado con Certificado QR",
+      "valorCop": 2000000,
+      "materialKg": 100,
+      "fechaCierre": "2026-10-07",
+      "probabilidad": 50
+    },
+    {
+      "id": "opp-1788808201370",
+      "relationId": "rel-1788808201361",
+      "titulo": "Lote Marquillas Tejidas Satín (0 Kg)",
+      "empresa": "Juan de Dios",
+      "etapa": "0. Recepción Automática",
+      "valorCop": 2000000,
+      "materialKg": 100,
+      "fechaCierre": "2026-10-07",
+      "probabilidad": 50
+    },
+    {
+      "id": "opp-1788808144670",
+      "relationId": "rel-1788808144662",
+      "titulo": "Lote Marquillas Tejidas Satín (0 Kg)",
+      "empresa": "One Half",
+      "etapa": "0. Recepción Automática",
+      "valorCop": 2000000,
+      "materialKg": 100,
+      "fechaCierre": "2026-10-07",
+      "probabilidad": 50
+    },
+    {
+      "id": "opp-1788807995337",
+      "relationId": "rel-1788807995326",
+      "titulo": "Lote Marquillas Tejidas Satín (0 Kg)",
+      "empresa": "Feroz",
+      "etapa": "0. Recepción Automática",
+      "valorCop": 2000000,
+      "materialKg": 100,
+      "fechaCierre": "2026-10-07",
+      "probabilidad": 50
+    },
+    {
+      "id": "opp-1788784207773",
+      "relationId": "rel-1788784207765",
+      "titulo": "Lote Marquillas Tejidas Satín (0 Kg)",
+      "empresa": "Tucurinica",
+      "etapa": "0. Recepción Automática",
+      "valorCop": 2000000,
+      "materialKg": 100,
+      "fechaCierre": "2026-10-07",
+      "probabilidad": 50
+    },
+    {
+      "id": "opp-1788485505224",
+      "relationId": "rel-1788485505224",
+      "titulo": "Lote Cintas al Sesgo & Ribs (200 Kg Denim / Índigo)",
+      "empresa": "Natalia J",
+      "etapa": "7. Entregado con Certificado QR",
+      "valorCop": 12320000,
+      "materialKg": 200,
+      "fechaCierre": "2026-10-04",
+      "probabilidad": 70
+    },
+    {
+      "id": "opp-1788276422283",
+      "relationId": "rel-1788276422283",
+      "titulo": "Lote Totes & Dustbags de Empaque (100 Kg Mezclas Poli-Algodón)",
+      "empresa": "Tiki",
+      "etapa": "0. Recepción Automática",
+      "valorCop": 6160000,
+      "materialKg": 100,
+      "fechaCierre": "2026-10-01",
+      "probabilidad": 70,
+      "proyectoEtapa": "Contacto & Propuesta"
+    },
+    {
+      "id": "opp-1",
+      "relationId": "rel-1",
+      "titulo": "Lote 70,000 Marquillas Denim Satín",
+      "empresa": "Studio Bogotá S.A.S.",
+      "etapa": "7. Entregado con Certificado QR",
+      "valorCop": 4800000,
+      "materialKg": 250,
+      "fechaCierre": "2026-09-15",
+      "probabilidad": 90,
+      "proyectoEtapa": "Contacto & Propuesta"
+    },
+    {
+      "id": "opp-2",
+      "relationId": "rel-2",
+      "titulo": "Lote 35,000 Hangtags Papel Lino QR",
+      "empresa": "Atelier V.R. Moda",
+      "etapa": "1. Contacto Recibido",
+      "valorCop": 3200000,
+      "materialKg": 180,
+      "fechaCierre": "2026-09-22",
+      "probabilidad": 75,
+      "proyectoEtapa": "Contacto & Propuesta"
+    },
+    {
+      "id": "opp-3",
+      "relationId": "rel-3",
+      "titulo": "Transformación 450 Kg Popelina Algodón",
+      "empresa": "Confecciones Andinas",
+      "etapa": "3. Propuesta Enviada",
+      "valorCop": 8500000,
+      "materialKg": 450,
+      "fechaCierre": "2026-10-05",
+      "probabilidad": 60
+    },
+    {
+      "id": "opp-4",
+      "relationId": "rel-4",
+      "titulo": "Piloto 120 Kg Mezclas Poli-Algodón",
+      "empresa": "Silvestre Eco-Wear",
+      "etapa": "5. Aprobación de Lote",
+      "valorCop": 1800000,
+      "materialKg": 120,
+      "fechaCierre": "2026-10-15",
+      "probabilidad": 40
+    }
+  ],
+  "materials": [
+    {
+      "id": "mat-1788808267715",
+      "relationId": "rel-1788808267699",
+      "empresa": "Dinamic Showroom",
+      "tipo": "Algodón 100%",
+      "pesoKg": 100,
+      "estado": "Disponible",
+      "fechaRecepcion": "2026-09-07",
+      "destinoInsumo": "Marquillas Tejidas Satín",
+      "certificadoId": "NM-2026-BOG-385"
+    },
+    {
+      "id": "mat-1788808201377",
+      "relationId": "rel-1788808201361",
+      "empresa": "Juan de Dios",
+      "tipo": "Algodón 100%",
+      "pesoKg": 100,
+      "estado": "Disponible",
+      "fechaRecepcion": "2026-09-07",
+      "destinoInsumo": "Marquillas Tejidas Satín",
+      "certificadoId": "NM-2026-BOG-792"
+    },
+    {
+      "id": "mat-1788808144678",
+      "relationId": "rel-1788808144662",
+      "empresa": "One Half",
+      "tipo": "Algodón 100%",
+      "pesoKg": 100,
+      "estado": "Disponible",
+      "fechaRecepcion": "2026-09-07",
+      "destinoInsumo": "Marquillas Tejidas Satín",
+      "certificadoId": "NM-2026-BOG-386"
+    },
+    {
+      "id": "mat-1788807995342",
+      "relationId": "rel-1788807995326",
+      "empresa": "Feroz",
+      "tipo": "Denim / Índigo",
+      "pesoKg": 100,
+      "estado": "Disponible",
+      "fechaRecepcion": "2026-09-07",
+      "destinoInsumo": "Marquillas Tejidas Satín",
+      "certificadoId": "NM-2026-BOG-606"
+    },
+    {
+      "id": "mat-1788784207781",
+      "relationId": "rel-1788784207765",
+      "empresa": "Tucurinica",
+      "tipo": "Mezclas Poli-Algodón",
+      "pesoKg": 100,
+      "estado": "Disponible",
+      "fechaRecepcion": "2026-09-07",
+      "destinoInsumo": "Marquillas Tejidas Satín",
+      "certificadoId": "NM-2026-BOG-821"
+    },
+    {
+      "id": "mat-1788485505224",
+      "relationId": "rel-1788485505224",
+      "empresa": "Natalia J",
+      "tipo": "Denim / Índigo",
+      "pesoKg": 200,
+      "estado": "En Diagnóstico",
+      "destinoInsumo": "Cintas al Sesgo & Ribs",
+      "certificadoId": "NM-2026-BOG-278",
+      "fechaRecepcion": "2026-09-04"
+    },
+    {
+      "id": "mat-1788276422283",
+      "relationId": "rel-1788276422283",
+      "empresa": "Tiki",
+      "tipo": "Mezclas Poli-Algodón",
+      "pesoKg": 100,
+      "estado": "En Diagnóstico",
+      "destinoInsumo": "Totes & Dustbags de Empaque",
+      "certificadoId": "NM-2026-BOG-862",
+      "fechaRecepcion": "2026-09-01"
+    },
+    {
+      "id": "mat-1",
+      "relationId": "rel-1",
+      "empresa": "Studio Bogotá S.A.S.",
+      "tipo": "Denim / Índigo",
+      "pesoKg": 250,
+      "estado": "En Desfibrado",
+      "destinoInsumo": "Marquillas Tejidas Satín",
+      "certificadoId": "NM-2026-BOG-084",
+      "fechaRecepcion": "2026-08-25"
+    },
+    {
+      "id": "mat-2",
+      "relationId": "rel-2",
+      "empresa": "Atelier V.R. Moda",
+      "tipo": "Lino & Fibras Nobles",
+      "pesoKg": 180,
+      "estado": "En Pulpa Textil",
+      "destinoInsumo": "Hangtags Circulares con QR",
+      "certificadoId": "NM-2026-BOG-089",
+      "fechaRecepcion": "2026-08-28"
+    },
+    {
+      "id": "mat-3",
+      "relationId": "rel-3",
+      "empresa": "Confecciones Andinas",
+      "tipo": "Algodón 100%",
+      "pesoKg": 450,
+      "estado": "Por Recolectar",
+      "destinoInsumo": "Cintas al Sesgo & Ribs",
+      "certificadoId": "NM-2026-BOG-093",
+      "fechaRecepcion": "2026-08-30"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-1788485505224",
+      "relationId": "rel-1788485505224",
+      "titulo": "Visita técnica de pesaje y recolección para Natalia J",
+      "tipo": "Visita Técnica",
+      "fecha": "2026-09-06",
+      "responsable": "Equipo Técnico Bogotá",
+      "completada": false
+    },
+    {
+      "id": "act-1788276422283",
+      "relationId": "rel-1788276422283",
+      "titulo": "Visita técnica de pesaje y recolección para Tiki",
+      "tipo": "Visita Técnica",
+      "fecha": "2026-09-03",
+      "responsable": "Equipo Técnico Bogotá",
+      "completada": false
+    },
+    {
+      "id": "act-1",
+      "relationId": "rel-3",
+      "titulo": "Pesaje digital en bodega Puente Aranda para Confecciones Andinas",
+      "tipo": "Visita Técnica",
+      "fecha": "2026-09-02",
+      "responsable": "Equipo Técnico Bogotá",
+      "completada": false
+    },
+    {
+      "id": "act-2",
+      "relationId": "rel-2",
+      "titulo": "Aprobación de arte gráfico de hangtags con Valentina Restrepo",
+      "tipo": "Llamada",
+      "fecha": "2026-09-03",
+      "responsable": "Comercial B2B",
+      "completada": false
+    },
+    {
+      "id": "act-3",
+      "relationId": "rel-4",
+      "titulo": "Llamada de reactivación y pesaje técnico para Silvestre Eco-Wear",
+      "tipo": "Llamada",
+      "fecha": "2026-09-01",
+      "responsable": "Comercial B2B",
+      "completada": false
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #F5E8C7;
+    --color-forest: #2C4231;
+    --color-ebony: #23110E;
+    --color-wine: #7B1B1B;
+    
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-lora: 'Lora', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color-scheme: light;
+  }
+
+  html {
+    color-scheme: light;
+    background-color: #F5E8C7;
+    color: #23110E;
+    font-family: var(--font-lora);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5E8C7;
+    color: #23110E;
+    font-family: var(--font-lora);
+    overflow-x: hidden;
+  }
+}
+
+/* Typography Utility Classes */
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-lora {
+  font-family: var(--font-lora);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Brand Palette Utilities */
+.bg-neuman-forest { background-color: #2C4231; }
+.bg-neuman-cream { background-color: #F5E8C7; }
+.bg-neuman-ebony { background-color: #23110E; }
+.bg-neuman-wine { background-color: #7B1B1B; }
+
+.text-neuman-forest { color: #2C4231; }
+.text-neuman-cream { color: #F5E8C7; }
+.text-neuman-ebony { color: #23110E; }
+.text-neuman-wine { color: #7B1B1B; }
+
+.border-neuman-forest { border-color: #2C4231; }
+.border-neuman-cream { border-color: #F5E8C7; }
+.border-neuman-ebony { border-color: #23110E; }
+.border-neuman-wine { border-color: #7B1B1B; }
+
+/* Subtle Analog Film Grain / Raw Linen Texture Overlay */
+.analog-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Apple Materials & Vibrancy: Signature Frosted Glass */
+.apple-glass {
+  background-color: rgba(245, 232, 199, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(44, 66, 49, 0.12);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .apple-glass {
+    background-color: #F5E8C7 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, body {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Chrome Light Mode Isolation for Admin CRM */
+.admin-light-theme {
+  color-scheme: light !important;
+  background-color: #F9F7F4 !important;
+  color: #1E1B18 !important;
+}
+
+.admin-light-theme input,
+.admin-light-theme select,
+.admin-light-theme textarea,
+.admin-light-theme option {
+  color-scheme: light !important;
+  background-color: #FFFFFF !important;
+  color: #1E1B18 !important;
+}
+
+/* NEUMAN CC Light Sweep / Metallic Gleam Keyframes */
+@keyframes neumanLightSweep {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  35%, 100% {
+    transform: translate(50%, 50%);
+  }
+}
+
+.neuman-gleam-beam {
+  animation: neumanLightSweep 4.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: transform;
+}
+
+/* Tailor Thread Glide Scroll Animation */
+@keyframes threadGlide {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+.animate-thread-glide {
+  animation: threadGlide 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* Tailor Arrow Micro-Bounce Animation */
+@keyframes tailorBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+.animate-tailor-bounce {
+  animation: tailorBounce 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+
+

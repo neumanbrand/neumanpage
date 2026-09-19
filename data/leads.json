@@ -1,0 +1,72 @@
+[
+  {
+    "material": "otro",
+    "monthlyVolumeKg": "200_500",
+    "sustainabilityStatus": "en_planeacion",
+    "brandName": "Tiki",
+    "contactName": "Tiki",
+    "contactRole": "",
+    "email": "TIki@si.com",
+    "phone": "3115740816",
+    "notes": "",
+    "id": "lead-1788223255934",
+    "timestamp": "2026-09-01T00:40:55.934Z",
+    "status": "nuevo"
+  },
+  {
+    "material": "denim",
+    "monthlyVolumeKg": "200_500",
+    "sustainabilityStatus": "en_ejecucion",
+    "brandName": "Denim Lab Colombia",
+    "contactName": "Andrés Morales",
+    "contactRole": "Director Creativo",
+    "email": "andres@denimlab.co",
+    "phone": "+57 320 555 1234",
+    "notes": "Retazos de índigo 100% algodón",
+    "id": "lead-1788193456626",
+    "timestamp": "2026-08-31T16:24:16.626Z",
+    "status": "nuevo"
+  },
+  {
+    "id": "lead-001",
+    "timestamp": "2026-08-31T09:30:00.000Z",
+    "brandName": "Taller Nómade",
+    "contactName": "Valentina Ríos",
+    "contactRole": "Fundadora y Diseñadora",
+    "email": "valentina@tallernomade.co",
+    "phone": "+57 310 123 4567",
+    "material": "algodon",
+    "monthlyVolumeKg": "50_200",
+    "sustainabilityStatus": "en_planeacion",
+    "status": "nuevo",
+    "notes": "Retazos de popelinas y franelas de corte de camisetas colección cápsula."
+  },
+  {
+    "id": "lead-002",
+    "timestamp": "2026-08-30T16:15:00.000Z",
+    "brandName": "Indigo & Co. Bogotá",
+    "contactName": "Carlos Mendoza",
+    "contactRole": "Gerente de Producción",
+    "email": "cmendoza@indigobogota.com",
+    "phone": "+57 301 987 6543",
+    "material": "denim",
+    "monthlyVolumeKg": "200_500",
+    "sustainabilityStatus": "en_ejecucion",
+    "status": "en_contacto",
+    "notes": "Sobrantes textiles de jeanería pesada 12oz y 14oz. Buscan hangtags y marquillas tejidas."
+  },
+  {
+    "id": "lead-003",
+    "timestamp": "2026-08-29T11:45:00.000Z",
+    "brandName": "Sastrería Contemporánea",
+    "contactName": "Mariana Gómez",
+    "contactRole": "Directora de Sostenibilidad",
+    "email": "m.gomez@sastreriacontemporanea.co",
+    "phone": "+57 315 444 8899",
+    "material": "lino_seda",
+    "monthlyVolumeKg": "50_200",
+    "sustainabilityStatus": "en_planeacion",
+    "status": "cerrado",
+    "notes": "Retazos de lino crudo y mezclas de fibras nobles para etiquetas colgantes."
+  }
+]
