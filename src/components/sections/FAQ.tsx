@@ -73,7 +73,7 @@ export function FAQ() {
             Bolsillos de Sastre • Preguntas Frecuentes
           </div>
           
-          <h2 className="font-cormorant text-3xl sm:text-5xl font-bold text-[#23110E] leading-tight">
+          <h2 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#23110E] leading-tight">
             Toca cada bolsillo para <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">extraer la respuesta</span>.
           </h2>
         </div>
@@ -113,7 +113,7 @@ export function FAQ() {
                   </div>
 
                   {/* Question */}
-                  <h3 className="font-cormorant text-lg sm:text-xl font-bold text-[#23110E] leading-snug">
+                  <h3 className="font-cormorant text-base sm:text-lg font-bold text-[#23110E] leading-snug">
                     {faq.question}
                   </h3>
 

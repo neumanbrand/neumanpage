@@ -68,7 +68,7 @@ export function ImpactCalculator() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-bold text-[#23110E] leading-tight"
+            className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-tight"
           >
             Calcula el valor de tus <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">residuos textiles</span>.
           </motion.h2>
@@ -97,8 +97,8 @@ export function ImpactCalculator() {
               <span className="text-xs font-mono uppercase tracking-wider text-[#23110E]/80 font-bold">
                 Volumen Mensual de Retazos de Corte:
               </span>
-              <span className="font-cormorant text-4xl sm:text-5xl font-bold text-[#2C4231]">
-                {wasteKg} <span className="text-base font-lora font-normal text-[#23110E]/70">Kg / mes</span>
+              <span className="font-cormorant text-2xl sm:text-3xl font-bold text-[#2C4231]">
+                {wasteKg} <span className="text-sm font-lora font-normal text-[#23110E]/70">Kg / mes</span>
               </span>
             </div>
 
@@ -132,7 +132,7 @@ export function ImpactCalculator() {
                     {m.label}
                   </span>
                 </div>
-                <div className="font-cormorant text-3xl sm:text-4xl font-bold text-[#2C4231] my-1">
+                <div className="font-cormorant text-2xl sm:text-3xl font-bold text-[#2C4231] my-1">
                   {m.val}
                 </div>
                 <p className="text-[11px] font-lora text-[#23110E]/70">

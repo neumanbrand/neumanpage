@@ -55,7 +55,7 @@ export function ProblemStatement() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-bold text-[#23110E] leading-tight tracking-tight"
+            className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-tight tracking-tight"
           >
             Hasta un 25% de tu tela comprada <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">se queda en el suelo</span> de corte.
           </motion.h2>
@@ -87,7 +87,7 @@ export function ProblemStatement() {
                 <div className="w-12 h-12 rounded-2xl bg-[#2C4231] flex items-center justify-center mb-5 shadow-md shadow-[#2C4231]/20">
                   {card.icon}
                 </div>
-                <div className="font-cormorant text-4xl sm:text-5xl font-bold text-[#2C4231] tracking-tight">
+                <div className="font-cormorant text-2xl sm:text-3xl font-bold text-[#2C4231] tracking-tight">
                   {card.stat}
                 </div>
                 <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-[#23110E] font-bold mt-2">

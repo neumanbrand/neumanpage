@@ -21,7 +21,7 @@ export function Chapter1Origin({ onNext, onOpenDiagnostic }: ChapterProps) {
       {/* Main Brand Wordmark */}
       <div className="pt-2">
         <NeumanWordmarkVector className="h-12 sm:h-16 w-auto drop-shadow-xs" color="green" />
-        <p className="font-cormorant italic text-2xl sm:text-3xl text-[#2C4231] font-medium tracking-wide mt-2">
+        <p className="font-cormorant italic text-lg sm:text-xl text-[#2C4231] font-medium tracking-wide mt-1.5">
           De residuo a relato.
         </p>
       </div>

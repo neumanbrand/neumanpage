@@ -144,7 +144,7 @@ export function DiagnosticWizard() {
           <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#2C4231] font-semibold bg-white/80 px-4 py-1.5 rounded-full border border-[#2C4231]/20 inline-block mb-3 shadow-xs">
             {resultData ? "Diagnóstico Completado" : `Paso ${currentStep} de 4 • Auditoría de Viabilidad Circular`}
           </span>
-          <h2 className="font-cormorant text-3xl sm:text-5xl font-bold text-[#23110E] leading-tight">
+          <h2 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#23110E] leading-tight">
             {resultData ? "Tu Proyección Circular B2B" : "Diagnóstico Técnico de Residuos"}
           </h2>
           <p className="font-lora text-xs sm:text-sm text-[#23110E]/80 mt-2">
@@ -175,7 +175,7 @@ export function DiagnosticWizard() {
               <div className="flex flex-wrap items-center justify-between border-b border-[#2C4231]/15 pb-4 gap-2">
                 <div>
                   <span className="text-[10px] font-mono uppercase text-[#2C4231] font-bold">Certificado Asignado</span>
-                  <h3 className="font-cormorant text-2xl font-bold text-[#23110E]">{resultData.brandName}</h3>
+                  <h3 className="font-cormorant text-lg sm:text-xl font-bold text-[#23110E]">{resultData.brandName}</h3>
                 </div>
                 <div className="px-4 py-1.5 rounded-xl bg-[#2C4231] text-[#F5E8C7] font-mono text-xs font-bold shadow-sm">
                   {resultData.certCode}
@@ -186,25 +186,25 @@ export function DiagnosticWizard() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="bg-[#FAF4E6] p-4 rounded-2xl border border-[#2C4231]/15 text-center">
                   <Tag className="w-5 h-5 text-[#2C4231] mx-auto mb-1.5" />
-                  <div className="font-cormorant text-2xl font-bold text-[#2C4231]">+{resultData.estimatedLabels.toLocaleString("es-CO")}</div>
+                  <div className="font-cormorant text-lg sm:text-xl font-bold text-[#2C4231]">+{resultData.estimatedLabels.toLocaleString("es-CO")}</div>
                   <p className="text-[10px] font-mono text-[#23110E]/70">{resultData.desiredProduct.split(" ")[0]} listas</p>
                 </div>
 
                 <div className="bg-[#FAF4E6] p-4 rounded-2xl border border-[#2C4231]/15 text-center">
                   <Sparkles className="w-5 h-5 text-[#2C4231] mx-auto mb-1.5" />
-                  <div className="font-cormorant text-2xl font-bold text-[#2C4231]">${(resultData.moneySavedCop / 1000000).toFixed(1)}M</div>
+                  <div className="font-cormorant text-lg sm:text-xl font-bold text-[#2C4231]">${(resultData.moneySavedCop / 1000000).toFixed(1)}M</div>
                   <p className="text-[10px] font-mono text-[#23110E]/70">Ahorro proyectado</p>
                 </div>
 
                 <div className="bg-[#FAF4E6] p-4 rounded-2xl border border-[#2C4231]/15 text-center">
                   <Droplets className="w-5 h-5 text-[#2C4231] mx-auto mb-1.5" />
-                  <div className="font-cormorant text-2xl font-bold text-[#2C4231]">{(resultData.waterSavedLiters / 1000).toFixed(0)}k Lts</div>
+                  <div className="font-cormorant text-lg sm:text-xl font-bold text-[#2C4231]">{(resultData.waterSavedLiters / 1000).toFixed(0)}k Lts</div>
                   <p className="text-[10px] font-mono text-[#23110E]/70">Agua preservada</p>
                 </div>
 
                 <div className="bg-[#FAF4E6] p-4 rounded-2xl border border-[#2C4231]/15 text-center">
                   <Scale className="w-5 h-5 text-[#2C4231] mx-auto mb-1.5" />
-                  <div className="font-cormorant text-2xl font-bold text-[#2C4231]">{resultData.kg} Kg</div>
+                  <div className="font-cormorant text-lg sm:text-xl font-bold text-[#2C4231]">{resultData.kg} Kg</div>
                   <p className="text-[10px] font-mono text-[#23110E]/70">{resultData.material.split(" ")[0]}</p>
                 </div>
               </div>

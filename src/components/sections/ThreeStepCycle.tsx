@@ -84,7 +84,7 @@ export function ThreeStepCycle() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-bold text-[#23110E] leading-tight"
+            className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-tight"
           >
             Los 4 Caminos para Rentabilizar <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">tus Residuos Textiles</span>.
           </motion.h2>
@@ -120,7 +120,7 @@ export function ThreeStepCycle() {
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="font-cormorant text-2xl font-bold text-[#23110E] leading-tight">
+                <h3 className="font-cormorant text-lg sm:text-xl font-bold text-[#23110E] leading-tight">
                   {item.title}
                 </h3>
                 <p className="text-xs font-mono text-[#2C4231]/80 mt-1 mb-3 font-medium">
@@ -140,7 +140,7 @@ export function ThreeStepCycle() {
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#F5E8C7]/70 font-semibold">
               Logística Inversa & Trazabilidad
             </span>
-            <h3 className="font-cormorant text-3xl sm:text-4xl font-bold text-[#F5E8C7] mt-1">
+            <h3 className="font-cormorant text-xl sm:text-2xl font-bold text-[#F5E8C7] mt-1">
               El Circuito Cerrado NEUMAN
             </h3>
           </div>
@@ -149,13 +149,13 @@ export function ThreeStepCycle() {
             {steps.map((st, sIdx) => (
               <div key={sIdx} className="flex flex-col gap-3 relative">
                 <div className="flex items-center gap-3.5">
-                  <span className="font-cormorant text-4xl font-bold text-[#F5E8C7]">
+                  <span className="font-cormorant text-2xl sm:text-3xl font-bold text-[#F5E8C7]">
                     {st.num}
                   </span>
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-[#F5E8C7]/20">
                     {st.icon}
                   </div>
-                  <h4 className="font-cormorant text-xl font-bold text-[#F5E8C7]">
+                  <h4 className="font-cormorant text-base sm:text-lg font-bold text-[#F5E8C7]">
                     {st.title}
                   </h4>
                 </div>

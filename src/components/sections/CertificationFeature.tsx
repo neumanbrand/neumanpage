@@ -51,7 +51,7 @@ export function CertificationFeature() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-bold text-[#23110E] leading-tight"
+              className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-tight"
             >
               Trazabilidad Verificable. <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">Cero Greenwashing</span>.
             </motion.h2>
@@ -80,7 +80,7 @@ export function CertificationFeature() {
                     <Check className="w-3.5 h-3.5 text-[#F5E8C7]" />
                   </div>
                   <div>
-                    <h4 className="font-cormorant text-xl font-bold text-[#23110E]">
+                    <h4 className="font-cormorant text-base sm:text-lg font-bold text-[#23110E]">
                       {pt.title}
                     </h4>
                     <p className="font-lora text-xs sm:text-sm text-[#23110E]/75 mt-1 leading-relaxed">
@@ -111,7 +111,7 @@ export function CertificationFeature() {
                     <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#F5E8C7]/80 font-bold block">
                       Certificado Oficial
                     </span>
-                    <h4 className="font-cormorant text-xl font-bold text-[#F5E8C7]">
+                    <h4 className="font-cormorant text-base sm:text-lg font-bold text-[#F5E8C7]">
                       Custodia Textil 1:1
                     </h4>
                   </div>

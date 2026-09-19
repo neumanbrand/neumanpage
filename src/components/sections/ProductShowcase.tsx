@@ -79,7 +79,7 @@ export function ProductShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-cormorant text-3xl sm:text-5xl lg:text-6xl font-bold text-[#23110E] leading-tight"
+            className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-tight"
           >
             ¿En qué se transforman tus <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">retazos textiles</span>?
           </motion.h2>
@@ -135,11 +135,11 @@ export function ProductShowcase() {
               </span>
             </div>
 
-            <h3 className="font-cormorant text-3xl sm:text-4xl font-bold text-[#23110E] leading-tight">
+            <h3 className="font-cormorant text-xl sm:text-2xl font-bold text-[#23110E] leading-tight">
               {current.name}
             </h3>
 
-            <p className="font-cormorant italic text-lg sm:text-xl text-[#2C4231] font-semibold">
+            <p className="font-cormorant italic text-sm sm:text-base text-[#2C4231] font-semibold">
               "{current.tagline}"
             </p>
 

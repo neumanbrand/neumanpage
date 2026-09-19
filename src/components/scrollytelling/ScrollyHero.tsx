@@ -359,12 +359,12 @@ export function ScrollyHero() {
               </span>
             </div>
 
-            <h1 className="font-cormorant text-3xl lg:text-[34px] font-bold text-[#23110E] leading-[1.08] tracking-tight">
+            <h1 className="font-cormorant text-xl lg:text-2xl font-bold text-[#23110E] leading-tight tracking-tight">
               De residuo <span className="italic font-normal text-[#2C4231]">a relato</span>.
             </h1>
 
-            <p className="font-lora text-[12.5px] text-[#23110E]/75 leading-relaxed max-w-[280px]">
-              Ingeniería circular 1:1 que transforma mermas de corte en nuevos insumos nobles de confección.
+            <p className="font-lora text-[11.5px] text-[#23110E]/75 leading-relaxed max-w-[270px]">
+              Ingeniería circular 1:1 que transforma retazos y sobrantes de corte en nuevos insumos nobles de confección.
             </p>
           </div>
         </div>
@@ -382,7 +382,7 @@ export function ScrollyHero() {
             <span className="font-mono text-[8.5px] tracking-[0.24em] uppercase text-[#2C4231]/80 font-semibold">
               Circularidad 1:1 · Bogotá
             </span>
-            <span className="font-cormorant text-xl font-bold text-[#23110E]">
+            <span className="font-cormorant text-base font-bold text-[#23110E]">
               De residuo <span className="italic font-normal text-[#2C4231]">a relato</span>.
             </span>
           </div>

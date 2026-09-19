@@ -54,7 +54,7 @@ export function Footer() {
             <NeumanWordmarkVector className="h-7 sm:h-8 w-auto" color="cream" />
           </div>
 
-          <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5E8C7] leading-tight max-w-lg">
+          <h2 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#F5E8C7] leading-tight max-w-lg">
             Inicia la transición circular <span className="italic font-normal underline decoration-[#7B1B1B] decoration-2 underline-offset-8">de tu confección</span>.
           </h2>
 
@@ -96,7 +96,7 @@ export function Footer() {
           <div className="bg-[#23110E]/85 backdrop-blur-xl rounded-3xl p-6 sm:p-7 border border-[#F5E8C7]/20 shadow-2xl">
             <div className="flex items-center gap-2.5 border-b border-[#F5E8C7]/15 pb-3 mb-4">
               <Users className="w-4 h-4 text-[#F5E8C7]" />
-              <h4 className="font-cormorant text-xl font-bold text-[#F5E8C7]">
+              <h4 className="font-cormorant text-base sm:text-lg font-bold text-[#F5E8C7]">
                 Equipo Líder NEUMAN
               </h4>
             </div>

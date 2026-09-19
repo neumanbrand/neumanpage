@@ -25,7 +25,7 @@ export function Chapter3Structure({ onNext }: ChapterProps) {
       </div>
 
       <div>
-        <h2 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#23110E] leading-tight">
+        <h2 className="font-cormorant text-lg sm:text-xl font-bold text-[#23110E] leading-tight">
           Insumos de alta costura <span className="italic font-normal text-[#2C4231]">& retorno ESG</span>.
         </h2>
         <p className="font-lora text-xs text-[#23110E]/80 mt-1 leading-relaxed">

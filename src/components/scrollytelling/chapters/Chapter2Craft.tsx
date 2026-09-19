@@ -35,7 +35,7 @@ export function Chapter2Craft({ onNext }: ChapterProps) {
       </div>
 
       <div>
-        <h2 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#23110E] leading-tight">
+        <h2 className="font-cormorant text-lg sm:text-xl font-bold text-[#23110E] leading-tight">
           El costo oculto de cortar tela <span className="italic font-normal text-[#2C4231]">convertido en activo</span>.
         </h2>
         <p className="font-lora text-xs sm:text-sm text-[#23110E]/80 mt-1.5 leading-relaxed">
