@@ -46,13 +46,13 @@ export function Navbar({
         {/* Center: Traditional Nav Links */}
         <nav className="hidden md:flex items-center gap-6 text-[12px] font-mono uppercase tracking-wider text-[#2C4231]/75">
           <a href="#problema" className="hover:text-[#2C4231] transition-colors">
-            El Problema
+            El Desafío
           </a>
           <a href="#ciclo" className="hover:text-[#2C4231] transition-colors">
-            Protocolo
+            Metodología
           </a>
           <a href="#productos" className="hover:text-[#2C4231] transition-colors">
-            Insumos
+            Oportunidades
           </a>
           <a href="#impacto" className="hover:text-[#2C4231] transition-colors">
             Impacto

@@ -8,15 +8,15 @@ export function CertificationFeature() {
   const points = [
     {
       title: "Certificado con Código QR Dinámico",
-      desc: "Cada lote procesado recibe un pasaporte digital verificable. Tu consumidor final escanea la marquilla o el hangtag y ve la trazabilidad exacta del retazo original.",
+      desc: "Cada proyecto de valorización recibe un pasaporte digital verificable. Tu consumidor final escanea la marquilla o el hangtag y accede a la trazabilidad del proceso.",
     },
     {
-      title: "Garantía Contractual 1:1 Cero Insumo Virgen",
-      desc: "Certificamos con rigor de laboratorio que el 100% de la fibra empleada en tus marquillas y productos proviene de tus propios descartes de confección.",
+      title: "Garantía Contractual y Trazabilidad 1:1",
+      desc: "Aseguramos que el 100% de la fibra valorizada en tus insumos o colecciones proviene estrictamente de tus propios excedentes textiles.",
     },
     {
       title: "Expediente Técnico para Reportes ESG",
-      desc: "Documentación auditable con métricas de litros de agua ahorrados y kg de CO₂ mitigados, lista para incorporar a tus memorias de sostenibilidad corporativa.",
+      desc: "Documentación auditable con métricas de agua evitada, CO₂ mitigado y residuos valorizados, lista para incorporar a tus memorias de sostenibilidad corporativa.",
     },
   ];
 
@@ -130,15 +130,15 @@ export function CertificationFeature() {
                 </div>
                 <div className="flex justify-between items-center text-xs border-b border-[#F5E8C7]/10 pb-2">
                   <span className="text-[#F5E8C7]/70">Origen:</span>
-                  <span className="font-bold text-[#F5E8C7]">Mesa de Corte Confección</span>
+                  <span className="font-bold text-[#F5E8C7]">Diagnóstico en Confección</span>
                 </div>
                 <div className="flex justify-between items-center text-xs border-b border-[#F5E8C7]/10 pb-2">
                   <span className="text-[#F5E8C7]/70">Materia Prima:</span>
-                  <span className="font-bold text-[#F5E8C7]">Algodón & Denim 100%</span>
+                  <span className="font-bold text-[#F5E8C7]">Algodón, Denim & Excedentes</span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-[#F5E8C7]/70">Insumos Entregados:</span>
-                  <span className="font-bold text-[#F5E8C7]">12,500 Marquillas Tejidas</span>
+                  <span className="text-[#F5E8C7]/70">Entregables:</span>
+                  <span className="font-bold text-[#F5E8C7]">Hoja de Ruta + Insumos Circulares</span>
                 </div>
               </div>
 

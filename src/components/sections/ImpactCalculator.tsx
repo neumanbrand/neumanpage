@@ -79,7 +79,7 @@ export function ImpactCalculator() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="font-lora text-sm sm:text-base text-[#23110E]/80 mt-4 max-w-2xl mx-auto leading-relaxed"
           >
-            Mueve el calibrador según el volumen mensual de retazos de tu producción y descubre cuántos insumos y ahorro genera para tu marca.
+            Mueve el calibrador según el volumen mensual estimado de retazos y excedentes de tu producción y descubre el potencial de insumos, ahorro y métricas ESG para tu marca.
           </motion.p>
         </div>
 

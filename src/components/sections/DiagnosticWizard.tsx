@@ -142,13 +142,13 @@ export function DiagnosticWizard() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#2C4231] font-semibold bg-white/80 px-4 py-1.5 rounded-full border border-[#2C4231]/20 inline-block mb-3 shadow-xs">
-            {resultData ? "Diagnóstico Completado" : `Paso ${currentStep} de 4 • Auditoría de Viabilidad Circular`}
+            {resultData ? "Diagnóstico Preliminar Completado" : `Paso ${currentStep} de 4 • Diagnóstico de Residuos & Excedentes`}
           </span>
           <h2 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#23110E] leading-tight">
-            {resultData ? "Tu Proyección Circular B2B" : "Diagnóstico Técnico de Residuos"}
+            {resultData ? "Oportunidades Preliminares de Valorización" : "Diagnóstico Técnico de Residuos y Excedentes"}
           </h2>
           <p className="font-lora text-xs sm:text-sm text-[#23110E]/80 mt-2">
-            Ingresa los parámetros de confección de tu marca para recibir un cálculo instantáneo de insumos y ahorro.
+            Ingresa los parámetros de tu taller o bodega para que nuestro equipo analice alternativas viables antes de tu sesión estratégica.
           </p>
         </div>
 
@@ -213,20 +213,20 @@ export function DiagnosticWizard() {
               <div className="p-4 rounded-2xl bg-[#2C4231]/10 border border-[#2C4231]/20 text-xs font-lora text-[#23110E] flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#2C4231] shrink-0" />
                 <div>
-                  <strong className="block font-semibold text-sm text-[#2C4231]">Diagnóstico ingresado en el sistema NEUMAN</strong>
-                  Un especialista técnico coordinará el muestreo y caracterización de residuos en tus instalaciones de confección.
+                  <strong className="block font-semibold text-sm text-[#2C4231]">Diagnóstico ingresado en NEUMAN Intelligence</strong>
+                  Un consultor experto analizará la viabilidad técnica y cruzará alternativas para estructurar tu Hoja de Ruta personalizada.
                 </div>
               </div>
 
               {/* Actions */}
               <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
                 <a
-                  href={`https://wa.me/573001234567?text=Hola%20NEUMAN,%20acabo%20de%20completar%20el%20diagnóstico%20para%20${encodeURIComponent(resultData.brandName)}%20(Código:%20${resultData.certCode}).`}
+                  href={`https://wa.me/573001234567?text=Hola%20NEUMAN,%20acabo%20de%20completar%20el%20diagnóstico%20para%20${encodeURIComponent(resultData.brandName)}%20(Código:%20${resultData.certCode}).%20Quisiera%20agendar%20la%20sesión%20con%20el%20consultor.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#2C4231] text-[#F5E8C7] text-xs font-lora uppercase tracking-wider font-semibold hover:bg-[#1E2E22] transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-[#2C4231]/20"
                 >
-                  <MessageSquare className="w-4 h-4" /> Hablar por WhatsApp con el Especialista
+                  <MessageSquare className="w-4 h-4" /> Agendar Sesión con un Consultor
                 </a>
 
                 <button

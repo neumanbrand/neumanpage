@@ -355,7 +355,7 @@ export function ScrollyHero() {
             <div className="inline-flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2C4231] animate-ping" />
               <span className="font-mono text-[9px] tracking-[0.26em] uppercase text-[#2C4231]/80 font-semibold">
-                Estudio de Economía Circular · Bogotá
+                Consultora de Valorización Textil · Bogotá
               </span>
             </div>
 
@@ -364,7 +364,7 @@ export function ScrollyHero() {
             </h1>
 
             <p className="font-lora text-[11.5px] text-[#23110E]/75 leading-relaxed max-w-[270px]">
-              Ingeniería circular 1:1 que transforma retazos y sobrantes de corte en nuevos insumos nobles de confección.
+              Convertimos residuos y excedentes textiles en oportunidades de valor para las empresas de moda.
             </p>
           </div>
         </div>
@@ -380,7 +380,7 @@ export function ScrollyHero() {
           </div>
           <div className="flex flex-col gap-1 max-w-[260px]">
             <span className="font-mono text-[8.5px] tracking-[0.24em] uppercase text-[#2C4231]/80 font-semibold">
-              Circularidad 1:1 · Bogotá
+              Consultora de Valorización Textil
             </span>
             <span className="font-cormorant text-base font-bold text-[#23110E]">
               De residuo <span className="italic font-normal text-[#2C4231]">a relato</span>.

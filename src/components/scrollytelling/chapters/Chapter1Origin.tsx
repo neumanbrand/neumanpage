@@ -28,20 +28,20 @@ export function Chapter1Origin({ onNext, onOpenDiagnostic }: ChapterProps) {
 
       {/* Narrative Body */}
       <p className="font-lora text-xs sm:text-sm text-[#23110E]/85 leading-relaxed">
-        Somos un <strong className="font-semibold text-[#2C4231]">grupo consultor B2B</strong> especializado en auditar y valorizar los residuos textiles de corte en la confección. Analizamos cada kilogramo de sobrante para transformarlo en nuevas líneas cápsula, comercializar deadstock y confeccionar insumos de alta definición con custodia 1:1.
+        Somos una <strong className="font-semibold text-[#2C4231]">consultora especializada en valorización textil</strong>. Actuamos como tu analista, investigadora y estratega externa para identificar oportunidades que hoy no estás viendo, tomar mejores decisiones sobre tus residuos y excedentes, y convertirlos en activos de alto valor comercial y reputacional.
       </p>
 
       {/* Value Badges Grid */}
       <div className="grid grid-cols-2 gap-2.5 pt-2 font-mono text-[11px]">
         <div className="p-3 rounded-2xl bg-white/80 border border-[#2C4231]/15 shadow-xs">
           <ShieldCheck className="w-4 h-4 text-[#2C4231] mb-1" />
-          <span className="block font-bold text-[#2C4231]">Custodia 1:1</span>
-          <span className="text-[#23110E]/60 text-[10px]">Cero fibra virgen mezclada</span>
+          <span className="block font-bold text-[#2C4231]">Inteligencia & Estrategia</span>
+          <span className="text-[#23110E]/60 text-[10px]">Diagnóstico analítico y hoja de ruta</span>
         </div>
         <div className="p-3 rounded-2xl bg-white/80 border border-[#2C4231]/15 shadow-xs">
           <Scale className="w-4 h-4 text-[#2C4231] mb-1" />
-          <span className="block font-bold text-[#2C4231]">2.6k Lts Agua/Kg</span>
-          <span className="text-[#23110E]/60 text-[10px]">Preservada para reporte ESG</span>
+          <span className="block font-bold text-[#2C4231]">Conversión Flexible</span>
+          <span className="text-[#23110E]/60 text-[10px]">Acompañamiento a producto final</span>
         </div>
       </div>
 

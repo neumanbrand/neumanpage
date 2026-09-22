@@ -33,7 +33,7 @@ export function Footer() {
         <div className="flex items-center gap-3">
           <span className="w-2.5 h-2.5 rounded-full bg-[#7B1B1B] animate-pulse" />
           <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#F5E8C7] font-bold">
-            Hub de Economía Circular B2B • Bogotá D.C.
+            Consultora de Valorización Textil • Bogotá D.C.
           </span>
         </div>
         <button
@@ -59,7 +59,7 @@ export function Footer() {
           </h2>
 
           <p className="font-lora text-xs sm:text-sm text-[#F5E8C7]/80 leading-relaxed max-w-md">
-            Transformamos los descartes textiles de tu marca en insumos de alta costura, monetización directa de deadstock y trazabilidad certificada en Bogotá y Colombia.
+            Transformamos los residuos y excedentes textiles de tu empresa en oportunidades tangibles de valor económico, circularidad técnica y posicionamiento de marca en Bogotá y Colombia.
           </p>
 
           {/* Contact Buttons */}
@@ -127,10 +127,10 @@ export function Footer() {
               El Desafío
             </a>
             <a href="#ciclo" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
-              El Circuito
+              Metodología (6 Fases)
             </a>
             <a href="#productos" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
-              Insumos 1:1
+              Oportunidades
             </a>
             <a href="#impacto" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
               Calculadora

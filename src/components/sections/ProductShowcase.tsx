@@ -70,9 +70,9 @@ export function ProductShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-block font-mono text-xs uppercase tracking-[0.25em] text-[#2C4231] font-semibold bg-white/80 px-4 py-1.5 rounded-full border border-[#2C4231]/15 mb-3 shadow-xs"
+            className="inline-block font-mono text-xs uppercase tracking-[0.25em] text-[#2C4231] font-semibold bg-[#2C4231]/10 px-4 py-1.5 rounded-full border border-[#2C4231]/20 mb-3 shadow-xs"
           >
-            Muestrario de Insumos Circulares
+            Mapa de Oportunidades & Transformación
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
@@ -81,7 +81,7 @@ export function ProductShowcase() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-tight"
           >
-            ¿En qué se transforman tus <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">retazos textiles</span>?
+            Rutas de Valorización: ¿En qué pueden <span className="italic font-normal text-[#2C4231] underline decoration-[#7B1B1B] decoration-2 underline-offset-8">transformarse tus residuos</span>?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -90,7 +90,7 @@ export function ProductShowcase() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="font-lora text-sm sm:text-base text-[#23110E]/80 mt-4 max-w-2xl mx-auto leading-relaxed"
           >
-            Sustituye proveedores de insumos vírgenes. Diseñamos componentes de alta gama que elevan el valor percibido de tu marca mientras cierras tu ciclo productivo.
+            Identificamos alternativas viables de reutilización, reciclaje, nuevos productos y deadstock. Según el caso de tu marca, te guiamos en la estrategia o coordinamos la manufactura de insumos y piezas terminadas.
           </motion.p>
         </div>
 
