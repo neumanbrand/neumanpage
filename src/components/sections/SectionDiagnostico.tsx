@@ -33,7 +33,7 @@ export function SectionDiagnostico({ onSelectSection, onOpenDiagnostic }: Sectio
   const whatsappUrl = `https://wa.me/573001234567?text=Hola%20NEUMAN,%20quiero%20agendar%20un%20diagnóstico%20técnico%20de%20residuos%20textiles.%20Volumen%20estimado:%20${wasteKg}%20kg/mes.`;
 
   const inputClass =
-    "w-full px-0 py-3 border-b border-[#2C4231]/20 bg-transparent text-sm font-lora text-[#23110E] placeholder:text-[#23110E]/30 focus:outline-none focus:border-[#2C4231] transition-colors duration-200 resize-none";
+    "w-full px-4 py-3 rounded-xl border border-[#2C4231]/25 bg-white text-sm font-lora text-[#23110E] placeholder:text-[#23110E]/40 focus:outline-none focus:border-[#2C4231] focus:ring-1 focus:ring-[#2C4231] transition-all duration-200 resize-none shadow-xs";
 
   return (
     <section className="py-20 sm:py-28 px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto w-full text-[#23110E]">
@@ -214,72 +214,94 @@ export function SectionDiagnostico({ onSelectSection, onOpenDiagnostic }: Sectio
           </a>
         </div>
 
-        {/* Right: Form — Sastre Line Style */}
-        <div className="lg:col-span-7">
+        {/* Right: Enclosed High-Impact Form Box */}
+        <div className="lg:col-span-7 bg-white rounded-3xl p-7 sm:p-10 border-2 border-[#2C4231] shadow-[0_20px_60px_rgba(44,66,49,0.12)] relative overflow-hidden">
+          {/* Top atelier accent line */}
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#2C4231] via-[#7B1B1B] to-[#2C4231]" />
+
           {formSubmitted ? (
             <div className="py-16 flex flex-col items-center text-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#2C4231] flex items-center justify-center">
-                <CheckCircle2 className="w-6 h-6 text-[#F5E8C7]" />
+              <div className="w-14 h-14 rounded-full bg-[#2C4231] flex items-center justify-center shadow-md">
+                <CheckCircle2 className="w-7 h-7 text-[#F5E8C7]" />
               </div>
-              <h4 className="font-cormorant text-3xl font-bold text-[#23110E]">
-                Solicitud Recibida
+              <h4 className="font-cormorant text-3xl sm:text-4xl font-bold text-[#23110E]">
+                Solicitud Recibida con Éxito
               </h4>
-              <p className="font-lora text-sm text-[#23110E]/65 max-w-md leading-[1.75]">
+              <p className="font-lora text-sm sm:text-base text-[#23110E]/75 max-w-md leading-[1.75]">
                 Un consultor técnico de NEUMAN se pondrá en contacto en menos de 24 horas
-                para coordinar la auditoría preliminar de tu marca.
+                para coordinar la auditoría preliminar de corte de tu marca.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div className="pb-4 border-b border-[#2C4231]/10">
-                <h4 className="font-cormorant text-2xl font-bold text-[#23110E]">
-                  Solicitud de Diagnóstico B2B
+              {/* Box Header: Authoritative & Clear Call to Action */}
+              <div className="pb-5 border-b border-[#2C4231]/15">
+                <div className="flex items-center justify-between gap-3 mb-2.5">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#7B1B1B] animate-pulse" />
+                    <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#7B1B1B] font-bold">
+                      Registro de Empresa
+                    </span>
+                  </div>
+                  <span className="font-mono text-[9px] uppercase tracking-wider text-[#2C4231] font-bold bg-[#2C4231]/10 px-2.5 py-0.5 rounded-full">
+                    Respuesta en &lt; 24h
+                  </span>
+                </div>
+
+                <h4 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-tight">
+                  Envía tus datos para agendar la auditoría técnica
                 </h4>
-                <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/40 mt-1">
-                  Completa los datos de tu empresa
+                <p className="font-lora text-xs sm:text-sm text-[#23110E]/70 mt-2 leading-relaxed">
+                  Completa el siguiente formulario para que nuestro equipo técnico evalúe los excedentes textiles de tu marca y coordine el muestreo in-situ en tu taller o planta.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/50 block mb-2">
-                    Nombre & Apellido
+                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/70 font-semibold block mb-2">
+                    Nombre & Apellido <span className="text-[#7B1B1B]">*</span>
                   </label>
                   <input
-                    type="text" required value={formData.name}
+                    type="text"
+                    required
+                    value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Camila Morales"
+                    placeholder="Ej. Camila Morales"
                     className={inputClass}
                   />
                 </div>
                 <div>
-                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/50 block mb-2">
-                    Empresa / Marca
+                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/70 font-semibold block mb-2">
+                    Empresa / Marca Textil <span className="text-[#7B1B1B]">*</span>
                   </label>
                   <input
-                    type="text" required value={formData.company}
+                    type="text"
+                    required
+                    value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    placeholder="Taller & Co."
+                    placeholder="Ej. Taller & Co."
                     className={inputClass}
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/50 block mb-2">
-                    Correo Corporativo
+                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/70 font-semibold block mb-2">
+                    Correo Corporativo <span className="text-[#7B1B1B]">*</span>
                   </label>
                   <input
-                    type="email" required value={formData.email}
+                    type="email"
+                    required
+                    value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="contacto@tumarca.co"
                     className={inputClass}
                   />
                 </div>
                 <div>
-                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/50 block mb-2">
-                    Volumen Mensual Aprox.
+                  <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/70 font-semibold block mb-2">
+                    Volumen Mensual Aprox. <span className="text-[#7B1B1B]">*</span>
                   </label>
                   <select
                     value={formData.volume}
@@ -289,37 +311,42 @@ export function SectionDiagnostico({ onSelectSection, onOpenDiagnostic }: Sectio
                     }}
                     className={inputClass + " appearance-none cursor-pointer"}
                   >
-                    <option value="50">Menos de 50 kg / mes</option>
-                    <option value="150">50 a 250 kg / mes</option>
-                    <option value="500">250 a 500 kg / mes</option>
-                    <option value="1000">Más de 500 kg / mes</option>
+                    <option value="50">Menos de 50 kg / mes (Taller de Autor)</option>
+                    <option value="150">50 a 250 kg / mes (Marca Mediana)</option>
+                    <option value="500">250 a 500 kg / mes (Planta de Confección)</option>
+                    <option value="1000">Más de 500 kg / mes (Operación Industrial)</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/50 block mb-2">
-                  Principales Materiales / Notas del Taller
+                <label className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/70 font-semibold block mb-2">
+                  Materiales Predominantes o Notas del Taller
                 </label>
                 <textarea
-                  rows={3} value={formData.message}
+                  rows={3}
+                  value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Ej. Retazos de popelina de algodón y rollos de temporadas previas en bodega..."
+                  placeholder="Ej. Retazos de popelina de algodón, lino y rollos de temporadas previas en bodega..."
                   className={inputClass}
                 />
               </div>
 
               <button
                 type="submit"
-                className="group mt-2 flex items-center gap-3 self-start cursor-pointer"
+                className="w-full py-4 px-6 rounded-xl bg-[#7B1B1B] hover:bg-[#5C1414] text-[#F5E8C7] font-lora font-semibold text-sm uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-3 cursor-pointer group mt-2"
               >
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#7B1B1B] text-[#F5E8C7] transition-colors duration-200 group-hover:bg-[#5C1414]">
-                  <Send className="w-3.5 h-3.5" />
-                </span>
-                <span className="font-lora text-sm font-semibold text-[#7B1B1B] relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#7B1B1B] group-hover:after:w-full after:transition-[width] after:duration-300">
-                  Enviar Solicitud de Diagnóstico
-                </span>
+                <span>Enviar Datos y Solicitar Diagnóstico</span>
+                <Send className="w-4 h-4 text-[#F5E8C7] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5" />
               </button>
+
+              <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-[10px] font-mono text-[#23110E]/55 text-center">
+                <span>🔒 Protocolo de confidencialidad bajo NDA</span>
+                <span>·</span>
+                <span>Muestreo in-situ en Bogotá</span>
+                <span>·</span>
+                <span>Sin costo inicial</span>
+              </div>
             </form>
           )}
         </div>
