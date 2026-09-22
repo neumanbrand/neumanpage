@@ -388,23 +388,25 @@ export function ScrollyHero() {
           </div>
         </div>
 
-        {/* 4. Left-Aligned Tailor Scroll Inciter with Floating Arrow */}
-        <div
+        {/* 4. Left-Aligned Tailor Scroll Inciter with Floating Arrow (Clickable to jump directly) */}
+        <a
+          href="#content-sections"
           ref={scrollIndicatorRef}
-          className={`absolute bottom-8 z-10 pointer-events-none flex items-center gap-2.5 transition-all duration-700 ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+          className={`absolute bottom-8 z-10 pointer-events-auto flex items-center gap-2.5 transition-all duration-700 hover:opacity-100 cursor-pointer group ${
+            mounted ? "opacity-80 translate-y-0" : "opacity-0 translate-y-3"
           }`}
           style={{
             left: "clamp(48px, 6vw, 96px)",
           }}
+          title="Saltar directamente a las secciones"
         >
-          <span className="font-mono text-xs text-[#2C4231]/80 font-bold inline-block animate-tailor-bounce">
+          <span className="font-mono text-xs text-[#2C4231] font-bold inline-block animate-tailor-bounce group-hover:translate-y-1 transition-transform">
             ↓
           </span>
-          <span className="font-mono text-[9px] tracking-[0.28em] uppercase text-[#2C4231]/80 font-semibold">
-            Scroll para transformar
+          <span className="font-mono text-[9px] tracking-[0.28em] uppercase text-[#2C4231] font-semibold border-b border-[#2C4231]/30 pb-0.5">
+            Explorar Secciones
           </span>
-        </div>
+        </a>
 
         {/* 5. Soft Ambient Lighting */}
         <div

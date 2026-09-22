@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 import { NeumanWordmarkVector } from "@/components/brand/BrandAssets";
 import { Mail, MessageSquare, ArrowUpRight, ShieldCheck, MapPin, ArrowUp, Users } from "lucide-react";
 
-export function Footer() {
+interface FooterProps {
+  onSelectSection?: (id: string) => void;
+}
+
+export function Footer({ onSelectSection }: FooterProps = {}) {
   const whatsappUrl = "https://wa.me/573001234567?text=Hola%20NEUMAN,%20quiero%20información%20sobre%20el%20diagnóstico%20de%20residuos%20textiles%20para%20mi%20marca.";
 
   const scrollToTop = () => {
@@ -123,24 +127,42 @@ export function Footer() {
 
           {/* Quick Nav Links & Badges */}
           <div className="grid grid-cols-3 gap-2 text-xs font-lora text-[#F5E8C7]/80">
-            <a href="#problema" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
+            <button
+              onClick={() => onSelectSection?.("desafio")}
+              className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10 cursor-pointer"
+            >
               El Desafío
-            </a>
-            <a href="#ciclo" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
-              Metodología (6 Fases)
-            </a>
-            <a href="#productos" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
-              Oportunidades
-            </a>
-            <a href="#impacto" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
-              Calculadora
-            </a>
-            <a href="#certificado" className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10">
+            </button>
+            <button
+              onClick={() => onSelectSection?.("metodologia")}
+              className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10 cursor-pointer"
+            >
+              Metodología
+            </button>
+            <button
+              onClick={() => onSelectSection?.("rutas")}
+              className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10 cursor-pointer"
+            >
+              Rutas
+            </button>
+            <button
+              onClick={() => onSelectSection?.("trazabilidad")}
+              className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10 cursor-pointer"
+            >
               Trazabilidad
-            </a>
-            <a href="#diagnostico" className="p-2 rounded-xl bg-[#F5E8C7] hover:bg-white text-[#2C4231] transition-all text-center font-bold shadow-xs">
+            </button>
+            <button
+              onClick={() => onSelectSection?.("diagnostico")}
+              className="p-2 rounded-xl bg-[#23110E]/50 hover:bg-[#23110E] hover:text-[#F5E8C7] transition-all text-center border border-[#F5E8C7]/10 cursor-pointer"
+            >
+              Calculadora
+            </button>
+            <button
+              onClick={() => onSelectSection?.("diagnostico")}
+              className="p-2 rounded-xl bg-[#F5E8C7] hover:bg-white text-[#2C4231] transition-all text-center font-bold shadow-xs cursor-pointer"
+            >
               Diagnóstico
-            </a>
+            </button>
           </div>
         </div>
 
