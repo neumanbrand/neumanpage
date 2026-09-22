@@ -9,182 +9,197 @@ interface SectionDesafioProps {
   onOpenDiagnostic: () => void;
 }
 
-export function SectionDesafio({
-  onSelectSection,
-  onOpenDiagnostic,
-}: SectionDesafioProps) {
-  const painPoints = [
-    {
-      code: "REF-DES-01",
-      title: "Valor Perdido",
-      metric: "15% – 25%",
-      metricLabel: "Pérdida promedio en mesa de corte",
-      desc: "Materia prima premium adquirida a precio completo que termina descartada, regalada o rematada a centavos por kilogramo sin generar retorno para la marca.",
-    },
-    {
-      code: "REF-DES-02",
-      title: "Falta de Claridad",
-      metric: "Ceguera Técnica",
-      metricLabel: "Composiciones & Mezclas",
-      desc: "Desconocimiento sistemático de los volúmenes reales generados por temporada, tipos exactos de mezclas de fibra y el costo oculto de bodegaje prolongado.",
-    },
-    {
-      code: "REF-DES-03",
-      title: "Oportunidades Invisibles",
-      metric: "Potencial Oculto",
-      metricLabel: "Rutas circulares no exploradas",
-      desc: "Insumos, hilaturas recicladas y opciones de upcycling no identificadas por falta de investigación técnica o desconexión con la cadena de valorización.",
-    },
-    {
-      code: "REF-DES-04",
-      title: "Falta de Capacidad",
-      metric: "Sobrecarga Operativa",
-      metricLabel: "Equipos saturados",
-      desc: "Equipos de diseño, patronaje y producción absorbidos por el día a día de las colecciones, sin tiempo ni recursos para estructurar proyectos sostenibles.",
-    },
-  ];
+const painPoints = [
+  {
+    code: "REF-DES-01",
+    title: "Valor Perdido",
+    metric: "15% – 25%",
+    metricLabel: "Pérdida promedio en mesa de corte",
+    desc: "Materia prima premium adquirida a precio completo que termina descartada, regalada o rematada a centavos por kilogramo sin retorno para la marca.",
+  },
+  {
+    code: "REF-DES-02",
+    title: "Ceguera Técnica",
+    metric: "Composiciones & Mezclas",
+    metricLabel: "Desconocimiento estructural",
+    desc: "Volúmenes reales por temporada, tipos exactos de mezcla de fibra y costo oculto de bodegaje prolongado sin mapeo ni registro formal.",
+  },
+  {
+    code: "REF-DES-03",
+    title: "Oportunidades Invisibles",
+    metric: "Potencial Oculto",
+    metricLabel: "Rutas circulares no exploradas",
+    desc: "Insumos, hilaturas recicladas y opciones de upcycling no identificadas por falta de investigación técnica o desconexión con la cadena de valorización.",
+  },
+  {
+    code: "REF-DES-04",
+    title: "Sobrecarga Operativa",
+    metric: "Equipos Saturados",
+    metricLabel: "Sin capacidad para proyectos ESG",
+    desc: "Diseño, patronaje y producción absorbidos por el día a día de las colecciones, sin tiempo ni recursos para estructurar proyectos sostenibles.",
+  },
+];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1], delay: i * 0.07 },
+  }),
+};
+
+export function SectionDesafio({ onSelectSection, onOpenDiagnostic }: SectionDesafioProps) {
   return (
-    <section className="py-16 sm:py-20 px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto w-full text-[#23110E]">
-      {/* Swiss Editorial Header */}
-      <div className="border-b border-[#2C4231]/15 pb-8 mb-12">
-        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
+    <section className="py-20 sm:py-28 px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto w-full text-[#23110E]">
+
+      {/* ── Section Header ─────────────────────────────── */}
+      <header className="border-b border-[#2C4231]/15 pb-10 mb-16">
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-8">
           <div className="flex items-center gap-3">
-            <span className="px-2.5 py-1 rounded bg-[#2C4231] text-[#F5E8C7] font-mono text-[11px] font-bold tracking-widest">
-              01
+            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#2C4231]/60">
+              01 /
             </span>
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#2C4231] font-semibold">
-              El Desafío Textil B2B
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#2C4231] font-semibold">
+              El Desafío Textil
             </span>
           </div>
-          <span className="font-mono text-[11px] text-[#23110E]/60 tracking-wider">
-            Diagnóstico Operativo & Fuga de Valor
+          <span className="font-mono text-[10px] text-[#23110E]/40 tracking-widest hidden sm:block">
+            Diagnóstico Operativo · Fuga de Valor
           </span>
         </div>
 
-        <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-bold text-[#23110E] mt-6 max-w-3xl leading-[1.15]">
-          La fuga silenciosa de recursos en la industria de la confección.
+        <h2 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-bold text-[#23110E] max-w-3xl leading-[1.08] tracking-tight">
+          La fuga silenciosa<br className="hidden sm:block" /> de recursos en confección.
         </h2>
 
-        <p className="font-lora text-sm sm:text-base text-[#23110E]/80 mt-4 max-w-2xl leading-relaxed">
-          En cada orden de producción, una fracción crítica de la tela comprada se convierte en residuo antes de llegar a la tienda. Sin una estrategia clara, este material se traduce en pasivo financiero y bodegaje improductivo.
+        <p className="font-lora text-base text-[#23110E]/65 mt-6 max-w-xl leading-[1.75]">
+          En cada orden de producción, una fracción crítica de la tela comprada
+          se convierte en residuo antes de llegar a la tienda. Sin estrategia,
+          este material se traduce en pasivo financiero y bodegaje improductivo.
         </p>
-      </div>
+      </header>
 
-      {/* Swiss Balance of Mass Comparison Table */}
-      <div className="bg-[#F5E8C7]/50 rounded-2xl p-6 sm:p-8 border border-[#2C4231]/15 mb-14">
-        <div className="flex items-center justify-between border-b border-[#2C4231]/15 pb-3 mb-6">
-          <span className="font-mono text-xs uppercase tracking-wider text-[#2C4231] font-bold">
-            Balance de Materia en Confección Textil
+      {/* ── Balance de Masa ─────────────────────────────── */}
+      <div className="mb-20">
+        <div className="flex items-baseline justify-between mb-6 pb-3 border-b border-[#2C4231]/10">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#2C4231] font-semibold">
+            Balance de Materia en Confección
           </span>
-          <span className="font-mono text-[10px] text-[#23110E]/60">
+          <span className="font-mono text-[9px] text-[#23110E]/40 tracking-wider hidden sm:block">
             Fuente: Análisis Sectorial NEUMAN
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="border-l-2 border-[#2C4231] pl-4">
-            <div className="font-mono text-xs text-[#23110E]/60 uppercase tracking-wider">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#2C4231]/10">
+          {/* Col 1 */}
+          <div className="py-8 md:py-10 md:pr-10">
+            <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/45 mb-3">
               Entrada a Corte
             </div>
-            <div className="font-cormorant text-3xl font-bold text-[#2C4231] my-1">
-              100%
+            <div className="font-cormorant text-6xl font-bold text-[#2C4231] leading-none mb-3">
+              100<span className="text-3xl">%</span>
             </div>
-            <p className="font-lora text-xs text-[#23110E]/75 leading-relaxed">
-              Materia prima comprada a precio comercial completo (rollos de algodón, denim, lino o mezclas).
+            <p className="font-lora text-sm text-[#23110E]/65 leading-relaxed max-w-xs">
+              Materia prima comprada a precio comercial completo — rollos de algodón, denim, lino o mezclas.
             </p>
           </div>
 
-          <div className="border-l-2 border-[#2C4231]/40 pl-4">
-            <div className="font-mono text-xs text-[#23110E]/60 uppercase tracking-wider">
+          {/* Col 2 */}
+          <div className="py-8 md:py-10 md:px-10">
+            <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/45 mb-3">
               Prenda Terminada
             </div>
-            <div className="font-cormorant text-3xl font-bold text-[#23110E] my-1">
-              75% – 80%
+            <div className="font-cormorant text-6xl font-bold text-[#23110E]/75 leading-none mb-3">
+              75<span className="text-3xl">%</span>
             </div>
-            <p className="font-lora text-xs text-[#23110E]/75 leading-relaxed">
-              Volumen efectivo transformado en producto comercializado para venta al consumidor final.
+            <p className="font-lora text-sm text-[#23110E]/65 leading-relaxed max-w-xs">
+              Volumen efectivo transformado en producto comercializado para el consumidor final.
             </p>
           </div>
 
-          <div className="border-l-2 border-[#7B1B1B] pl-4 bg-[#7B1B1B]/5 p-3 rounded-r-xl">
-            <div className="font-mono text-xs text-[#7B1B1B] uppercase tracking-wider font-bold">
+          {/* Col 3 — highlight */}
+          <div className="py-8 md:py-10 md:pl-10 relative">
+            <div className="absolute top-0 left-0 w-full md:w-px md:h-full h-px bg-[#7B1B1B]/20" />
+            <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#7B1B1B] mb-3 font-semibold">
               Residuos de Corte & Sobrantes
             </div>
-            <div className="font-cormorant text-3xl font-bold text-[#7B1B1B] my-1">
-              15% – 25%
+            <div className="font-cormorant text-6xl font-bold text-[#7B1B1B] leading-none mb-3">
+              25<span className="text-3xl">%</span>
             </div>
-            <p className="font-lora text-xs text-[#23110E]/80 leading-relaxed font-medium">
+            <p className="font-lora text-sm text-[#23110E]/70 leading-relaxed max-w-xs font-medium">
               Retazos, orillos y despuntes que se acumulan en bodegas o terminan en vertederos sin plan de rescate.
             </p>
           </div>
         </div>
       </div>
 
-      {/* The 4 Core Pain Points (From Slide 3) */}
-      <div className="mb-14">
-        <div className="mb-6 flex items-baseline justify-between border-b border-[#2C4231]/10 pb-2">
-          <h3 className="font-cormorant text-2xl font-bold text-[#23110E]">
-            Los 4 Dolores Estructurales de las Marcas
+      {/* ── Los 4 Dolores ──────────────────────────────── */}
+      <div className="mb-20">
+        <div className="flex items-baseline justify-between mb-8 pb-3 border-b border-[#2C4231]/10">
+          <h3 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#23110E]">
+            Los 4 Dolores Estructurales
           </h3>
-          <span className="font-mono text-[11px] text-[#2C4231] font-medium">
+          <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#2C4231]/60 hidden sm:block">
             Diagnóstico de Barreras Internas
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#2C4231]/8">
           {painPoints.map((point, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="bg-white/80 rounded-2xl p-6 sm:p-7 border border-[#2C4231]/15 shadow-sm hover:border-[#2C4231]/40 transition-all flex flex-col justify-between"
+              custom={idx}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-60px" }}
+              className="bg-[#FAF4E6] p-8 sm:p-10 group transition-colors duration-300 hover:bg-[#F5E8C7] flex flex-col gap-5"
             >
-              <div>
-                <div className="flex items-center justify-between border-b border-[#2C4231]/10 pb-3 mb-4">
-                  <span className="font-mono text-[10px] text-[#2C4231] font-bold tracking-widest bg-[#2C4231]/5 px-2 py-0.5 rounded">
-                    {point.code}
-                  </span>
-                  <span className="font-mono text-xs text-[#7B1B1B] font-semibold">
-                    {point.metric}
-                  </span>
-                </div>
-
-                <h4 className="font-cormorant text-xl font-bold text-[#23110E]">
-                  {point.title}
-                </h4>
-                <div className="font-mono text-[11px] text-[#2C4231] font-medium mt-0.5 mb-3">
-                  {point.metricLabel}
-                </div>
-
-                <p className="font-lora text-xs sm:text-sm text-[#23110E]/80 leading-relaxed">
-                  {point.desc}
-                </p>
+              {/* Top row */}
+              <div className="flex items-start justify-between gap-4">
+                <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#2C4231]/50">
+                  {point.code}
+                </span>
+                <span className="font-cormorant text-2xl font-bold text-[#7B1B1B] text-right leading-tight shrink-0 max-w-[10rem]">
+                  {point.metric}
+                </span>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-[#2C4231]/10 flex items-center justify-between text-[11px] font-mono text-[#23110E]/50">
-                <span>Evaluación B2B</span>
-                <span>Bogotá D.C.</span>
+              {/* Title */}
+              <h4 className="font-cormorant text-2xl sm:text-3xl font-bold text-[#23110E] leading-tight">
+                {point.title}
+              </h4>
+
+              {/* Sublabel */}
+              <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#2C4231] font-semibold">
+                {point.metricLabel}
               </div>
-            </div>
+
+              {/* Desc */}
+              <p className="font-lora text-sm text-[#23110E]/70 leading-[1.75]">
+                {point.desc}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Editorial Pull Quote / Sastre Insight */}
-      <div className="bg-[#2C4231] text-[#F5E8C7] rounded-2xl p-8 sm:p-10 mb-10 border border-[#2C4231] shadow-xl">
-        <div className="max-w-3xl">
-          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#F5E8C7]/70 font-semibold block mb-3">
-            El Enfoque de Consultoría NEUMAN
-          </span>
-          <blockquote className="font-cormorant text-xl sm:text-2xl font-bold text-[#F5E8C7] leading-snug">
-            “No se trata de reciclar por cumplir una etiqueta. Se trata de recuperar el valor financiero y técnico de cada metro de tela que tu empresa ya pagó.”
-          </blockquote>
-          <p className="font-lora text-xs sm:text-sm text-[#F5E8C7]/80 mt-4 leading-relaxed">
-            Nuestro trabajo como consultora es auditar con precisión de sastre ese flujo de materiales, clasificarlo y diseñar una hoja de ruta con retornos tangibles.
-          </p>
+      {/* ── Pull Quote ─────────────────────────────────── */}
+      <blockquote className="border-l-2 border-[#2C4231] pl-8 sm:pl-12 py-2 mb-20">
+        <div className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#2C4231]/50 mb-4">
+          El enfoque de NEUMAN
         </div>
-      </div>
+        <p className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-[#23110E] leading-[1.18] max-w-3xl">
+          "No se trata de reciclar por cumplir una etiqueta. Se trata de recuperar el valor financiero
+          de cada metro de tela que tu empresa ya pagó."
+        </p>
+        <p className="font-lora text-sm text-[#23110E]/60 mt-6 max-w-2xl leading-[1.75]">
+          Nuestro trabajo es auditar con precisión de sastre ese flujo de materiales, clasificarlo
+          y diseñar una hoja de ruta con retornos tangibles.
+        </p>
+      </blockquote>
 
-      {/* Bottom Continuity Navigation */}
       <SectionFooterNav
         currentId="desafio"
         onSelectSection={onSelectSection}

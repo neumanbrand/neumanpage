@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export interface SectionMeta {
   id: string;
@@ -10,11 +10,11 @@ export interface SectionMeta {
 }
 
 export const SECTIONS_META: SectionMeta[] = [
-  { id: "desafio", num: "01", title: "El Desafío" },
-  { id: "metodologia", num: "02", title: "Metodología & Entregables" },
-  { id: "rutas", num: "03", title: "Rutas de Valorización" },
+  { id: "desafio",      num: "01", title: "El Desafío" },
+  { id: "metodologia",  num: "02", title: "Metodología & Entregables" },
+  { id: "rutas",        num: "03", title: "Rutas de Valorización" },
   { id: "trazabilidad", num: "04", title: "Trazabilidad & Confianza" },
-  { id: "diagnostico", num: "05", title: "Diagnóstico & Impacto" },
+  { id: "diagnostico",  num: "05", title: "Diagnóstico & Impacto" },
 ];
 
 interface SectionFooterNavProps {
@@ -29,57 +29,60 @@ export function SectionFooterNav({
   onOpenDiagnostic,
 }: SectionFooterNavProps) {
   const currentIndex = SECTIONS_META.findIndex((s) => s.id === currentId);
-  const prevSection = currentIndex > 0 ? SECTIONS_META[currentIndex - 1] : null;
-  const nextSection =
-    currentIndex < SECTIONS_META.length - 1
-      ? SECTIONS_META[currentIndex + 1]
-      : null;
+  const prevSection  = currentIndex > 0 ? SECTIONS_META[currentIndex - 1] : null;
+  const nextSection  = currentIndex < SECTIONS_META.length - 1
+    ? SECTIONS_META[currentIndex + 1]
+    : null;
 
   return (
-    <div className="w-full mt-16 pt-8 border-t border-[#2C4231]/15">
-      {/* Editorial Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-        
-        {/* Left: Previous Section */}
-        <div className="w-full sm:w-auto flex justify-start">
+    <footer className="w-full mt-24 pt-10 border-t border-[#2C4231]/15">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+
+        {/* Left: Previous */}
+        <div className="flex-1 flex justify-start">
           {prevSection ? (
             <button
               onClick={() => onSelectSection(prevSection.id)}
-              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#23110E]/70 hover:text-[#2C4231] transition-colors py-2 group cursor-pointer"
+              className="group inline-flex items-center gap-3 cursor-pointer"
             >
-              <ArrowLeft className="w-4 h-4 text-[#2C4231] group-hover:-translate-x-1 transition-transform" />
-              <span>
-                {prevSection.num}. {prevSection.title}
+              <ArrowLeft className="w-3.5 h-3.5 text-[#2C4231] transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-x-1" />
+              <span className="flex flex-col items-start">
+                <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/40">
+                  Anterior
+                </span>
+                <span className="font-lora text-sm text-[#23110E]/70 group-hover:text-[#2C4231] transition-colors duration-200 leading-tight">
+                  {prevSection.title}
+                </span>
               </span>
             </button>
           ) : (
-            <div className="text-xs font-mono uppercase tracking-wider text-[#23110E]/40">
+            <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/30">
               Inicio del recorrido
-            </div>
+            </span>
           )}
         </div>
 
-        {/* Center: Progress Index Dots */}
-        <div className="flex items-center gap-2">
-          {SECTIONS_META.map((sec, idx) => {
+        {/* Center: Step Numerals */}
+        <div className="flex items-center gap-1.5">
+          {SECTIONS_META.map((sec) => {
             const isActive = sec.id === currentId;
             return (
               <button
                 key={sec.id}
                 onClick={() => onSelectSection(sec.id)}
                 title={sec.title}
-                className="group flex items-center gap-1.5 px-2 py-1 rounded-md transition-all cursor-pointer"
+                className="relative flex flex-col items-center gap-0.5 px-2 py-1 cursor-pointer group"
               >
                 <span
-                  className={`block transition-all duration-300 ${
+                  className={`block rounded-full transition-all duration-300 ${
                     isActive
-                      ? "w-6 h-2 bg-[#2C4231] rounded-full"
-                      : "w-2 h-2 bg-[#2C4231]/25 hover:bg-[#2C4231]/60 rounded-full"
+                      ? "w-5 h-0.5 bg-[#2C4231]"
+                      : "w-2 h-0.5 bg-[#2C4231]/20 group-hover:bg-[#2C4231]/50"
                   }`}
                 />
                 <span
-                  className={`text-[10px] font-mono font-bold ${
-                    isActive ? "text-[#2C4231]" : "text-[#23110E]/40"
+                  className={`font-mono text-[9px] font-bold transition-colors duration-200 ${
+                    isActive ? "text-[#2C4231]" : "text-[#23110E]/30 group-hover:text-[#2C4231]/60"
                   }`}
                 >
                   {sec.num}
@@ -89,28 +92,37 @@ export function SectionFooterNav({
           })}
         </div>
 
-        {/* Right: Next Section or CTA */}
-        <div className="w-full sm:w-auto flex justify-end">
+        {/* Right: Next / CTA */}
+        <div className="flex-1 flex justify-end">
           {nextSection ? (
             <button
               onClick={() => onSelectSection(nextSection.id)}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#2C4231] text-[#F5E8C7] hover:bg-[#1E2E22] text-xs font-lora font-semibold uppercase tracking-wider transition-all shadow-md group cursor-pointer"
+              className="group inline-flex items-center gap-3 cursor-pointer"
             >
-              <span>Continuar a: {nextSection.title}</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              <span className="flex flex-col items-end">
+                <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#23110E]/40">
+                  Siguiente
+                </span>
+                <span className="font-lora text-sm text-[#23110E]/70 group-hover:text-[#2C4231] transition-colors duration-200 leading-tight">
+                  {nextSection.title}
+                </span>
+              </span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#2C4231] transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1" />
             </button>
           ) : (
             <button
               onClick={onOpenDiagnostic}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#7B1B1B] text-[#F5E8C7] hover:bg-[#5C1414] text-xs font-lora font-semibold uppercase tracking-wider transition-all shadow-md cursor-pointer"
+              className="group inline-flex items-center gap-2.5 cursor-pointer"
             >
-              <CheckCircle2 className="w-4 h-4 text-[#F5E8C7]" />
-              <span>Solicitar Diagnóstico Técnico</span>
+              <span className="font-lora text-sm font-semibold text-[#7B1B1B] relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#7B1B1B] group-hover:after:w-full after:transition-[width] after:duration-300">
+                Solicitar Diagnóstico Técnico
+              </span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#7B1B1B] transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           )}
         </div>
 
       </div>
-    </div>
+    </footer>
   );
 }
