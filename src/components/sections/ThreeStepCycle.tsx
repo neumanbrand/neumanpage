@@ -246,5 +246,6 @@ export function ThreeStepCycle() {
         </div>
 
       </div>
+    </section>
   );
 }
